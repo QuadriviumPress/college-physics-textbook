@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - **Internal links**: `{{ site.baseurl }}/...` (Liquid) → root-relative `/...`; the build applies the `/physics-book2` path prefix for GitHub Pages and drops it for Vercel (detected via the `VERCEL` env var).
 - **Root pages**: `index.html` → `index.njk`, `sw.js` → `sw.njk` (built to `/sw.js`). Output paths are byte-identical to the Jekyll build (`contents/<slug>.html`, `/SUMMARY.html`, `/sw.js`, `/index.html`).
 - **CI/deploy**: All GitHub Actions workflows (`ci.yml`, `deploy.yml`, `generate-pdfs.yml`, `link-check.yml`) are Node-only on Node 24. `vercel.json` builds with `npm run build`.
-- **Docs**: `README.md`, `CONTRIBUTE.md`, `claude.md` rewritten for the Node/Eleventy toolchain.
+- **Docs**: `README.md`, `CONTRIBUTE.md`, `AGENTS.md` rewritten for the Node/Eleventy toolchain.
 
 ### Removed
 
@@ -127,7 +127,7 @@ See `roadmap.md` for the current build architecture.
 
 - **Documentation**: Comprehensive updates
   - Updated `README.md` with recent improvements
-  - Enhanced `claude.md` with December 2025 updates
+  - Enhanced `AGENTS.md` with December 2025 updates
   - Improved `scripts/README.md` with parallel generation docs
   - Updated `assets/pdf/README.md` with automation details
   - Updated this `CHANGELOG.md`

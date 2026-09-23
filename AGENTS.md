@@ -11,7 +11,7 @@
   - **GitHub Pages**: https://quadriviumpress.github.io/college-physics-textbook/
 - **Local Dev**: `npm run serve` → `http://localhost:4000/college-physics-textbook/` (Node ≥ 22.15).
 - **Structure**: Content in `contents/`, scripts in `scripts/`, service worker `sw.njk` in root.
-- **Key Files**: `SUMMARY.md` (TOC), `eleventy.config.js` (build), `vercel.json` (Vercel), `claude.md` (this file).
+- **Key Files**: `SUMMARY.md` (TOC), `eleventy.config.js` (build), `vercel.json` (Vercel), `AGENTS.md` (this file).
 
 **Common Tasks:**
 
@@ -248,7 +248,7 @@ This is an open educational resource. When contributing, please adhere to the fo
 
 ### Code Review
 
-- Review the Testing Checklist in `claude.md` before submitting a PR.
+- Review the Testing Checklist in `AGENTS.md` before submitting a PR.
 - Address any failures from the automated checks in your PR.
 - Be prepared for feedback and collaborative iteration.
 
