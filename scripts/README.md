@@ -38,7 +38,7 @@ All scripts follow a consistent naming convention using colons as separators:
 | Prefix       | Purpose                   | Examples                               |
 | ------------ | ------------------------- | -------------------------------------- |
 | `check:*`    | Validation/quality checks | check:links, check:yaml, check:content |
-| `fix:*`      | Auto-fix issues           | fix:content, fix:equations, fix:links |
+| `fix:*`      | Auto-fix issues           | fix:content, fix:equations, fix:links  |
 | `lint:*`     | Lint files                | lint:markdown                          |
 | `generate:*` | File/asset generation     | generate:pdf, generate:icons           |
 | `parse:*`    | Parse/extract data        | parse:summary                          |
@@ -469,7 +469,6 @@ Scripts use these npm packages:
 - `js-yaml` - YAML processing
 - `minisearch` - Full-text search indexing
 - `sharp` - Image processing
-- `simple-git` - Git operations
 - `@playwright/test` - PDF generation
 
 For physics calculation verification:
