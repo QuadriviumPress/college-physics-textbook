@@ -155,15 +155,9 @@ See `roadmap.md` for the current build architecture.
 - Weekly automated PDF regeneration
 - 100% PDF success rate (310/310)
 
-### Future Plans
+### Follow-up on the PDF repository plan
 
-See [`.github/workflows/FUTURE-PLAN.md`](.github/workflows/FUTURE-PLAN.md) for planned improvements:
-
-- **Repository Optimization**: Exclude PDFs from git tracking
-  - Current: 594MB of PDFs in repository
-  - Future: Generate PDFs dynamically during deployment
-  - Expected: Repository size reduction from ~600MB to ~40MB
-  - Benefit: Faster clones, no binary merge conflicts
+The PDF cleanup proposed in 2025 was completed in July 2026. Chapter PDFs are now gitignored build artifacts, generated during GitHub Pages deployment by `.github/workflows/deploy.yml` and the shared `generate-chapter-pdfs` action. `.github/workflows/generate-pdfs.yml` also publishes a quarterly GitHub Release archive. This removed roughly 600 MB of PDFs from the repository.
 
 ---
 
