@@ -116,7 +116,7 @@
     "minisearch": "^7.2.0",
     "prettier": "^3.9.5",
     "sharp": "^0.35.4",
-    "vitest": "^4.1.11"
+    "vitest": "^4.1.12"
   },
   "lint-staged": {
     "*.js": [
