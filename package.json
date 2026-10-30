@@ -6,7 +6,7 @@
   "repository": "https://github.com/QuadriviumPress/college-physics-textbook",
   "type": "module",
   "engines": {
-    "node": ">=22"
+    "node": ">=26"
   },
   "scripts": {
     "prepare": "sh hooks/install.sh",
