@@ -8,13 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Changed
 
-- **Static site generator**: Jekyll (Ruby) → **Eleventy v4** (Node), pinned to `4.0.0-alpha.10`. The build is now Node-only (`npm run build` / `npm run serve`), requiring Node ≥ 22.15 and no Ruby/Bundler.
+- **Static site generator**: Jekyll (Ruby) → **Eleventy v4** (Node), pinned to `4.0.0-alpha.10`. The build became Node-only (`npm run build` / `npm run serve`), with no Ruby/Bundler. This migration required Node ≥ 22.15. The floor is now Node ≥ 26 (`engines.node`), and CI installs Node 26.
 - **Markdown renderer**: Kramdown → **markdown-it** with custom plugins under `lib/eleventy/` (Kramdown-faithful math wrapping, typography, slug algorithm, and `problem`/`solution`/`example`/`note`/`glossary`/etc. containers).
 - **Templates**: Liquid layouts/includes (`_layouts/`, `_includes/*.html`) → Nunjucks (`_includes/*.njk`, `_includes/layouts/`). Markdown bodies are rendered with no template engine, so math passes through verbatim.
 - **Config**: `_config.yml` → `eleventy.config.js` + `_data/site.js`.
 - **Internal links**: `{{ site.baseurl }}/...` (Liquid) → root-relative `/...`; the build applies the `/physics-book2` path prefix for GitHub Pages and drops it for Vercel (detected via the `VERCEL` env var).
 - **Root pages**: `index.html` → `index.njk`, `sw.js` → `sw.njk` (built to `/sw.js`). Output paths are byte-identical to the Jekyll build (`contents/<slug>.html`, `/SUMMARY.html`, `/sw.js`, `/index.html`).
-- **CI/deploy**: All GitHub Actions workflows (`ci.yml`, `deploy.yml`, `generate-pdfs.yml`, `link-check.yml`) are Node-only on Node 24. `vercel.json` builds with `npm run build`.
+- **CI/deploy**: All GitHub Actions workflows (`ci.yml`, `deploy.yml`, `generate-pdfs.yml`, `link-check.yml`) became Node-only. They used Node 24 for this migration and now install Node 26. `vercel.json` builds with `npm run build`.
 - **Docs**: `README.md`, `CONTRIBUTE.md`, `AGENTS.md` rewritten for the Node/Eleventy toolchain.
 
 ### Removed
